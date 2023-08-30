@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+
+  <!-- las llaves es para que podamos poner una variable -->
+    <img [src]="url" [alt]="alt" class="card-img-top animate__animated animate__fadeIn" [ngStyle]="{display: hasLoaded ? '' : 'none' }">
+
+<!-- las img en angular tienen un evento que no tenemos que hacer nosotros y se llama load cuando se carga la imagen y como valor llamamos al metodo que si creamos -->
+
+<img *ngIf="!hasLoaded" src="assets/loader.svg" height="35" width="35" class="mt-3" alt="" (load)="onLoad()">
+</div>
